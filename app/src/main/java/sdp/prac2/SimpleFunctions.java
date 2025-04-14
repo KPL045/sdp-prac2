@@ -33,4 +33,22 @@ public class SimpleFunctions {
         }
         return true;
     }
+
+        public static void Task6 (int[] arr){
+        int[] newArr = new int[arr.length];
+
+            for(int i=0;i<arr.length;i++){
+                if(arr[i]%100==0){
+                    newArr[i]=arr[i];
+                }
+                else{
+                    newArr[i]=(int)(Math.ceil(arr[i]/100.0)*100);
+                }
+
+            }
+
+        for (int num : newArr) {
+            System.out.println(num);
+        }
+    }
 }
