@@ -6,5 +6,24 @@ package sdp.prac2;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-class AppTest {
+class AppTest {@Test
+
+    public void testTask4() {
+        // Arrange
+        List<Integer> a = Arrays.asList(1, 2, 3);
+        List<Integer> b = Arrays.asList(4, 5, 6);
+
+        List<Integer> c = Arrays.asList(1, 2, 3);
+        List<Integer> d = Arrays.asList(4, 5);
+
+        // Act
+        List<Integer> result1 = SimpleFunctions.Task4(a, b);
+        List<Integer> result2 = SimpleFunctions.Task4(a, b);
+
+        // Assert
+        List<Integer> expected = Arrays.asList(1 * 6, 2 * 5, 3 * 4); // [6, 10, 12]
+        assertEquals(expected, result1);
+        assertNull(result2);
+    }
+
 }
