@@ -33,21 +33,22 @@ public class SimpleFunctions {
         }
         return true;
     }
+    
+    ////////////////////////////////////////////////////Task6////////////////////////////////////////////////////////////////////////////////////////////////////////////
+     public static void Task6 (List<Integer> lst){
+        List<Integer> newLst = new ArrayList<Integer>();
 
-        public static void Task6 (int[] arr){
-        int[] newArr = new int[arr.length];
-
-            for(int i=0;i<arr.length;i++){
-                if(arr[i]%100==0){
-                    newArr[i]=arr[i];
+            for(int i=0;i<lst.size();i++){
+                if(lst.get(i)%100==0){
+                    newLst.add(lst.get(i));
                 }
                 else{
-                    newArr[i]=(int)(Math.ceil(arr[i]/100.0)*100);
+                    newLst.add((int)(Math.ceil(lst.get(i)/100.0)*100));
                 }
 
             }
 
-        for (int num : newArr) {
+        for (int num : newLst) {
             System.out.println(num);
         }
     }
