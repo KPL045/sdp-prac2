@@ -5,6 +5,27 @@ import java.util.*;
 public class SimpleFunctions {
     public SimpleFunctions() {}
     
+
+    //A Method for removing the first character of each string in a list of strings
+    public static List<String> task2(List<String> lst){
+
+       List<String> newList = new ArrayList<>();
+       
+       // we to interate through all the element in the list and  remove the first character of each element
+       for(int i = 0; i < lst.size(); i++){
+           String str = lst.get(i); // we get the element at index i
+
+           // we check if the string is not empty before removing the first character
+
+           if (str.length() > 1) {// this will also help remove elements that will result in empty string
+               str = str.substring(1); // remove the first character
+           }
+           newList.add(i, str); // update the list with the modified string
+       }
+        return newList;
+    }
+
+
     public static boolean Task3(String s) {
         int balance = 0;
         
