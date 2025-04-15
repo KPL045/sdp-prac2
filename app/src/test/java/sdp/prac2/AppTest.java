@@ -26,6 +26,25 @@ class AppTest {@Test
         assertEquals(expected, result1);
         assertNull(result2);
     }
+    @Test void task3MatchingParentheses() {
+        // Arrange
+        String input1 = "(())";
+        String input2 = "(()())";
+        String input3 = "(()))(";
+        String input4 = "((())";
+
+        // Act
+        boolean result1 = SimpleFunctions.Task3(input1);
+        boolean result2 = SimpleFunctions.Task3(input2);
+        boolean result3 = SimpleFunctions.Task3(input3);
+        boolean result4 = SimpleFunctions.Task3(input4);
+
+        // Assert
+        assertTrue(result1);
+        assertTrue(result2);
+        assertFalse(result3);
+        assertFalse(result4); // unmatched closing parenthesis
+    }
 
     @Test void task6RoundsNumbers() {
         // Arrange
