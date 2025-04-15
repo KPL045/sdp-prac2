@@ -62,7 +62,9 @@ public class SimpleFunctions {
         return answer;
     }
     
-
+    // Task 5 by Munashe (g23M8754)
+    // Check if the list is sorted in ascending order
+    // Returns true if sorted, false otherwise
     public static boolean Task5(List<Integer> lst) {
         if (lst.size() == 0) {
             return true;
@@ -76,7 +78,7 @@ public class SimpleFunctions {
     }
     
     ////////////////////////////////////////////////////Task6////////////////////////////////////////////////////////////////////////////////////////////////////////////
-     public static void Task6 (List<Integer> lst){
+    public static List<Integer> Task6(List<Integer> lst){
         List<Integer> newLst = new ArrayList<Integer>();
 
             for(int i=0;i<lst.size();i++){
@@ -89,8 +91,6 @@ public class SimpleFunctions {
 
             }
 
-        for (int num : newLst) {
-            System.out.println(num);
+        return newLst; 
         }
-    }
 }
