@@ -22,6 +22,26 @@ public class SimpleFunctions {
         return balance == 0; 
     }
 
+   /*Task 4 by Christina(g20m4892)*/
+    public static List<Integer> Task4(List<Integer> a, List<Integer> b) {
+        // Check if the lists have the same size
+        if (a.size() != b.size()) {
+            return null;
+        }
+        
+        List<Integer> answer = new ArrayList<>();
+        int length = a.size();
+        
+        for (int k = 0; k < length; k++) {
+            // Multiply k th element from start of a with the last element in list b
+            int product = a.get(k) * b.get(length - 1 - k);
+            answer.add(product);
+        }
+        
+        return answer;
+    }
+    
+
     public static boolean Task5(List<Integer> lst) {
         if (lst.size() == 0) {
             return true;
