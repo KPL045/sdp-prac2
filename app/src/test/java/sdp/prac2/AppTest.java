@@ -3,6 +3,7 @@
  */
 package sdp.prac2;
 
+import java.util.*;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -24,6 +25,27 @@ class AppTest {@Test
         List<Integer> expected = Arrays.asList(1 * 6, 2 * 5, 3 * 4); // [6, 10, 12]
         assertEquals(expected, result1);
         assertNull(result2);
+    }
+
+    @Test void task6RoundsNumbers() {
+        // Arrange
+        List<Integer> input1 = Arrays.asList(100, 200, 300);
+        List<Integer> input2 = Arrays.asList(150, 250, 350);
+        List<Integer> input3 = Arrays.asList(123, 456, 789);
+
+        List<Integer> expected1 = Arrays.asList(100, 200, 300);
+        List<Integer> expected2 = Arrays.asList(200, 300, 400);
+        List<Integer> expected3 = Arrays.asList(200, 500, 800);
+
+        // Act
+        List<Integer> result1 = SimpleFunctions.Task6(input1);
+        List<Integer> result2 = SimpleFunctions.Task6(input2);
+        List<Integer> result3 = SimpleFunctions.Task6(input3);
+
+        // Assert
+        assertIterableEquals(expected1, result1);
+        assertIterableEquals(expected2, result2);
+        assertIterableEquals(expected3, result3);
     }
 
 }
