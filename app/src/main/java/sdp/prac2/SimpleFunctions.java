@@ -35,7 +35,7 @@ public class SimpleFunctions {
     }
     
     ////////////////////////////////////////////////////Task6////////////////////////////////////////////////////////////////////////////////////////////////////////////
-     public static void Task6 (List<Integer> lst){
+     public static List<Integer> Task6(List<Integer> lst){
         List<Integer> newLst = new ArrayList<Integer>();
 
             for(int i=0;i<lst.size();i++){
@@ -48,8 +48,6 @@ public class SimpleFunctions {
 
             }
 
-        for (int num : newLst) {
-            System.out.println(num);
+        return newLst; 
         }
-    }
 }
