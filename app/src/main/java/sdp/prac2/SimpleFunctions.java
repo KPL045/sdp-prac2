@@ -7,7 +7,7 @@ public class SimpleFunctions {
     public SimpleFunctions() {}
 
 
-    public static int Taskone(ArrayList<Integer> lista, ArrayList<Integer> listb)
+    public static int Task1(ArrayList<Integer> lista, ArrayList<Integer> listb)
 { //g22l3735 task 1
     int sum = 0;
 
