@@ -34,20 +34,20 @@ public class SimpleFunctions {
         return true;
     }
     
-    ////////////////////////////////////////////////////Task6////////////////////////////////////////////////////////////////////////////////////////////////////////////
-     public static List<Integer> Task6(List<Integer> lst){
-        List<Integer> newLst = new ArrayList<Integer>();
+////////////////////////////////////////////////////Task6////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    public static List<Integer> Task6(List<Integer> lst){
+        List<Integer> newLst = new ArrayList<Integer>();//new list to append to 
 
             for(int i=0;i<lst.size();i++){
-                if(lst.get(i)%100==0){
-                    newLst.add(lst.get(i));
+                if(lst.get(i)%100==0){ //check if the elements in the list are in 100s 
+                    newLst.add(lst.get(i));//if so adds number in the list as it is 
                 }
                 else{
-                    newLst.add((int)(Math.ceil(lst.get(i)/100.0)*100));
+                    newLst.add((int)(Math.ceil(lst.get(i)/100.0)*100));//if not round up to the nearest 100s 
                 }
 
             }
 
-        return newLst; 
+        return newLst; //retuen the list with elements rounded up to the nearest 100s
         }
 }
