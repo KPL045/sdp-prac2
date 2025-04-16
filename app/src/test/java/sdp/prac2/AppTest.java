@@ -31,6 +31,33 @@ class AppTest {
 
     // }
 
+    @Test void testTask2(){
+        //Arrange
+//test 1
+        List<String> checka = Arrays.asList ("wordle", "connections", "Crossword");
+        List<String> checkb = Arrays.asList (" ", "Boothill", "Feixiao", "Game", " ");
+
+//test 2
+        List<String> expecteda = Arrays.asList ("ordle", "onnections", "rossword");
+        List<String> expectedb = Arrays.asList ("oothill", "eixiao", "ame");
+
+
+        //act
+//act 1
+        List<String> resulta = SimpleFunctions.task2(checka);
+//act 2
+        List<String> resultb = SimpleFunctions.task2(checkb);
+
+
+        //assert
+//assertion 1
+        assertArrayEquals(expecteda, resulta);
+//assertion 2
+        assertArrayEquals(expectedb, resultb);
+
+
+    }
+
 
     @Test
 
