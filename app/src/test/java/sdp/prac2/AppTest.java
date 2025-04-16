@@ -3,11 +3,36 @@
  */
 package sdp.prac2;
 
+import java.lang.reflect.Array;
 import java.util.*;
+
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-class AppTest {@Test
+class AppTest {
+    // // test Task 1 
+    // @Test void testTask1(){
+    //      // Arrange
+    //     List<Integer> a = Arrays.asList(6,8,10,9);
+    //     List<Integer> b = Arrays.asList(0,1,2);
+
+    //     List<Integer> c= Arrays.asList(6,7,20,9);
+    //     List<Integer> d = Arrays.asList(1,2,3);
+
+    //     // Act
+    //     int results1 = SimpleFunctions.Task1(a, b);
+    //     int results2 = SimpleFunctions.Task1(c, d);
+
+    //      // Assert
+    //      int expected1 = 24;
+    //      int expected2= 36;
+    //      assertEquals(expected1, results1);
+    //      assertEquals(expected2, results1);
+
+    // }
+
+
+    @Test
 
     public void testTask4() {
         // Arrange
@@ -26,6 +51,8 @@ class AppTest {@Test
         assertEquals(expected, result1);
         assertNull(result2);
     }
+
+    
     @Test void task3MatchingParentheses() {
         // Arrange
         String input1 = "(())";
@@ -66,6 +93,9 @@ class AppTest {@Test
         assertIterableEquals(expected1, result1);
         assertIterableEquals(expected2, result2);
         assertIterableEquals(expected3, result3);
+
+
+
     }
 
 }
