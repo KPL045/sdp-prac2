@@ -25,23 +25,28 @@ public class SimpleFunctions {
         return newList;
     }
 
-
+    //Task3 by Lucas(g23m9827)
+    //Checks if a string of parentheses is balanced.
+    //A string is balanced if every opening '(' has a matching closing ')'
+    //if it is balanced it returns true, else false 
     public static boolean Task3(String s) {
-        int balance = 0;
-        
+        int Count = 0; // Tracks open brackets
+
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
             if (c == '(') {
-                balance++;
-            } else if (c == ')') {
-                balance--;
-                if (balance < 0) {
+                Count++;
+            }else if (c == ')') {
+                Count--;
+                if (Count < 0) {
                     return false;
                 }
             }
         }
-        return balance == 0; 
+
+        return Count == 0; // True if all brackets are matched
     }
+
 
    /*Task 4 by Christina(g20m4892)*/
     public static List<Integer> Task4(List<Integer> a, List<Integer> b) {
