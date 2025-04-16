@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-<<<<<<< HEAD
+
     //test Task 1 
      @Test void testTask1(){
           // Arrange
@@ -31,66 +31,8 @@ class AppTest {
           assertEquals(expected2, results1);
 
      }
-=======
-
-    //test Task 1 
- 
-
-    @Test void testTask1(){
- 
-
-        // Arrange
 
 
-      List<Integer> a = Arrays.asList(6,8,10,9);
-
-
-      List<Integer> b = Arrays.asList(0,1,2);
-
-
-
-
-
-       List<Integer> c= Arrays.asList(6,7,20,9);
-
-
-       List<Integer> d = Arrays.asList(1,2,3);
-
-
-
-
-
-   // Act
-
-
-       int results1 = SimpleFunctions.Task1(a, b);
-
-
-       int results2 = SimpleFunctions.Task1(c, d);
-
-
-
-
-
-        // Assert
-
-
-        int expected1 = 24;
-
-
-        int expected2= 36;
-
-
-        assertEquals(expected1, results1);
-
-
-        assertEquals(expected2, results1);
-
-
-
-
-
-   }
 
    @Test void testTask2(){
     //Arrange
@@ -119,7 +61,6 @@ class AppTest {
 
 }
 
->>>>>>> g22L3735
 
 
     @Test
