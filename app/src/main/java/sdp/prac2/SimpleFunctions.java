@@ -5,7 +5,26 @@ import java.util.List;
 
 public class SimpleFunctions {
     public SimpleFunctions() {}
-    
+
+
+    public static int Taskone(ArrayList<Integer> lista, ArrayList<Integer> listb)
+{ //g22l3735 task 1
+    int sum = 0;
+
+    for (int k = 0; k < listb.size(); k ++)
+    {
+        if (listb.get(k) < 0 || listb.get(k) > lista.size()) //check out of bounds based on the two standards
+        {
+            continue;//if out of bounds go to next listb value
+        }
+        else
+        {
+            sum = sum + lista.get(listb.get(k));//if the list b index is inbounds then use the value at that index to get the list a value and add it to the final sum
+        }
+    }
+
+    return sum;
+}
 
     //A Method for removing the first character of each string in a list of strings
     public static List<String> task2(List<String> lst){
