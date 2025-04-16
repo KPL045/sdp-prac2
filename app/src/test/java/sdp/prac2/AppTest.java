@@ -3,11 +3,67 @@
  */
 package sdp.prac2;
 
+import java.lang.reflect.Array;
 import java.util.*;
+
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-class AppTest {@Test
+class AppTest {
+
+    //test Task 1 
+     @Test void testTask1(){
+          // Arrange
+        List<Integer> a = Arrays.asList(6,8,10,9);
+        List<Integer> b = Arrays.asList(0,1,2);
+
+         List<Integer> c= Arrays.asList(6,7,20,9);
+         List<Integer> d = Arrays.asList(1,2,3);
+
+     // Act
+         int results1 = SimpleFunctions.Task1(a, b);
+         int results2 = SimpleFunctions.Task1(c, d);
+
+          // Assert
+          int expected1 = 24;
+          int expected2= 36;
+          assertEquals(expected1, results1);
+          assertEquals(expected2, results1);
+
+     }
+
+
+
+   @Test void testTask2(){
+    //Arrange
+//test 1
+    List<String> checka = Arrays.asList ("wordle", "connections", "Crossword");
+    List<String> checkb = Arrays.asList (" ", "Boothill", "Feixiao", "Game", " ");
+
+//test 2
+    List<String> expecteda = Arrays.asList ("ordle", "onnections", "rossword");
+    List<String> expectedb = Arrays.asList ("oothill", "eixiao", "ame");
+
+
+    //act
+//act 1
+    List<String> resulta = SimpleFunctions.task2(checka);
+//act 2
+    List<String> resultb = SimpleFunctions.task2(checkb);
+
+
+    //assert
+//assertion 1
+    assertArrayEquals(expecteda, resulta);
+//assertion 2
+    assertArrayEquals(expectedb, resultb);
+
+
+}
+
+
+
+    @Test
 
     public void testTask4() {
         // Arrange
@@ -26,6 +82,8 @@ class AppTest {@Test
         assertEquals(expected, result1);
         assertNull(result2);
     }
+
+    
     @Test void task3MatchingParentheses() {
         // Arrange
         String input1 = "(())";
@@ -66,6 +124,9 @@ class AppTest {@Test
         assertIterableEquals(expected1, result1);
         assertIterableEquals(expected2, result2);
         assertIterableEquals(expected3, result3);
+
+
+
     }
 
 }

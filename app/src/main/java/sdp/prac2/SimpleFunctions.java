@@ -1,10 +1,30 @@
 package sdp.prac2;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class SimpleFunctions {
     public SimpleFunctions() {}
-    
+
+
+    public static int Task1(ArrayList<Integer> lista, ArrayList<Integer> listb)
+{ //g22l3735 task 1
+    int sum = 0;
+
+    for (int k = 0; k < listb.size(); k ++)
+    {
+        if (listb.get(k) < 0 || listb.get(k) > lista.size()) //check out of bounds based on the two standards
+        {
+            continue;//if out of bounds go to next listb value
+        }
+        else
+        {
+            sum = sum + lista.get(listb.get(k));//if the list b index is inbounds then use the value at that index to get the list a value and add it to the final sum
+        }
+    }
+
+    return sum;
+}
 
     //A Method for removing the first character of each string in a list of strings
     public static List<String> task2(List<String> lst){
@@ -84,18 +104,18 @@ public class SimpleFunctions {
     
     ////////////////////////////////////////////////////Task6////////////////////////////////////////////////////////////////////////////////////////////////////////////
     public static List<Integer> Task6(List<Integer> lst){
-        List<Integer> newLst = new ArrayList<Integer>();
+        List<Integer> newLst = new ArrayList<Integer>();//new list to append to 
 
             for(int i=0;i<lst.size();i++){
-                if(lst.get(i)%100==0){
-                    newLst.add(lst.get(i));
+                if(lst.get(i)%100==0){ //check if the elements in the list are in 100s 
+                    newLst.add(lst.get(i));//if so adds number in the list as it is 
                 }
                 else{
-                    newLst.add((int)(Math.ceil(lst.get(i)/100.0)*100));
+                    newLst.add((int)(Math.ceil(lst.get(i)/100.0)*100));//if not round up to the nearest 100s 
                 }
 
             }
 
-        return newLst; 
+        return newLst; //retuen the list with elements rounded up to the nearest 100s
         }
 }
